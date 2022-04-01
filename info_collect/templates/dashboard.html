@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Admin Dashboard {% endblock %}
+
+{% block content %}
+<div class="columns">
+    <div class="column is-one-third"></div>
+    <div class="column has-text-centered">
+        <h1 class="title">Interested People - {{num_interested}}</h1>
+
+        {% for lead in leads %} 
+        <div class="card">
+            <strong>{{lead.name}}</strong> - {{lead.email}} <br>
+            <p class="content">{{lead.title}}</p>
+            Created at: {{lead.created_at}} <br>
+           <a href="/remove/{{lead.id}}"><button class="button is-danger">Delete Record</button></a> 
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+    <div class="column">
+        
+        <a href="/get_csv"><button class="button is-rounded is-link">Download CSV</button></a>
+        
+    </div>
+  </div>
+
+
+{% endblock %}

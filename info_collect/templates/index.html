@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="columns">
+    <div class="column is-one-third">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div class="column has-text-centered" style="padding-top: 25px;">
+        <img src="{% static 'img/logo_main.png' %}" alt=""><br>
+        <p class="content">The Great Resignation has brought to light the dissatisfaction with unprofessional recruiting practices, HR is buried in irrelevant resumes, ATS has become a black hole of names and outdated inefficient job boards haven't really changed in 200 years.</p>
+        <br>
+        <video src="{% static 'img/Recruiterless ai.mp4' %}" autoplay controls></video>
+    </div>
+    <div class="column"></div>
+</div>
+{% endblock %}

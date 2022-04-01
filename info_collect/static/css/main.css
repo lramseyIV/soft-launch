@@ -1,0 +1,26 @@
+.back-light-blue {
+    background-color: #7cc6d8;
+}
+
+.back-darker-blue {
+    background-color: #4a51a9;
+}
+
+.back-grey {
+    background-color: #5f5f5f;
+}
+.back-light {
+    background-color: #eaeaea;
+}
+
+.back-white {
+    background-color: #ffffff;
+}
+
+.takes-half {
+    width: 50%;
+}
+
+.has-text-bold {
+    font-weight: bold;
+}

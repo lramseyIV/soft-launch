@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} Log In {% endblock %}
+
+{% block content %}
+
+
+<div class="columns">
+    <div class="column is-one-third"></div>
+    <div class="column">
+        <form action="/login-admin" method="post">
+            {% csrf_token %}
+            <label for="username">Username</label>
+            <input type="text" class="input is-rounded" name="username" required> <br>
+
+            <label for="username">Password</label>
+            <input type="password" class="input is-rounded" name="password" required>
+            <br><br>
+            <button class="button is-rounded">Log in</button>
+        </form>
+
+
+    </div>
+    <div class="column"></div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
